@@ -5,7 +5,7 @@ import InputText from "./InputText";
 import UserLogin from "./UserLogin";
 import socketIOClient from 'socket.io-client'
 const ChatContainer=()=>{
-    const [user,setUser]= useState(localStorage.getItem('user'))
+    const [user,setUser]= useState(localStorage.getItem("user"))
    
     const socketio = socketIOClient('http://localhost:3001')
      const [chats,setChats]=useState([])
@@ -20,7 +20,7 @@ const sendToSocket=(chat)=>{
 }
     const addMessage =(chat)=>{
       const newChat ={...chat,user:localStorage.getItem("user"),
-        jyoti: localstorage.getItem("jyoti"),};
+        jyoti: localStorage.getItem("jyoti"),};
         setChats([...chats,newChat])
         sendToSocket([...chats,newChat])
     };
@@ -45,7 +45,7 @@ const sendToSocket=(chat)=>{
                     <strong>Logout</strong>
                 </p>
             </div>
-        <ChatList chats={chats}/>
+        <ChatList chats={chats} user={user}/>
         <InputText addMessage={addMessage}/>
            </div>
            ):

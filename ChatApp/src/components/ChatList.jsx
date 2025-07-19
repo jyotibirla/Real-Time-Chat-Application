@@ -1,7 +1,7 @@
 import React from "react";
-const ChatList =({chats})=>{
-function SenderChat (message,username,jyoti){
-    const user =localStorage.getItem('user')
+const ChatList =({chats,user})=>{
+function SenderChat ({message,username,jyoti}){
+    const user =localStorage.getItem("user")
     return(
         <div className='chat_sender'>
             <img src={jyoti} alt="" />
@@ -12,7 +12,7 @@ function SenderChat (message,username,jyoti){
         </div>
     )
 }
-function ReceiverChat (message,username,jyoti){
+function ReceiverChat ({message,username,jyoti}){
     return(
         <div className='chat_receiver'>
         <img src={jyoti} alt="" />
