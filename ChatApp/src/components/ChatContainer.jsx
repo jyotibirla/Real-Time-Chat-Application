@@ -19,7 +19,8 @@ const sendToSocket=(chat)=>{
     socketio.emit('chat',chat)
 }
     const addMessage =(chat)=>{
-      const newChat ={...chat,user:localStorage.getItem("user"),
+      const newChat ={...chat,
+        user:localStorage.getItem("user"),
         jyoti: localStorage.getItem("jyoti"),};
         setChats([...chats,newChat])
         sendToSocket([...chats,newChat])

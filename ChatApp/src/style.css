@@ -8,7 +8,7 @@
 .App{
     background-color: #ece5dd;
     max-height: 100%;
-    padding: 20px;
+    padding: 25px;
 }
 
 /* login code */
@@ -59,15 +59,17 @@
 .chats_header{
 display: flex;
 justify-content: space-between;
+align-items: center;
 margin-bottom: 20px;
+font-size: 20px;
 }
 
 .chats_icon{
     color: red;
 }
 .chats_logout{
-    color: rgb(6,152,152);
-    
+    color: rgb(6, 152, 152);
+    padding-right: 3px;
 }
 
 /* chat list */
@@ -80,19 +82,19 @@ margin-bottom: 20px;
 .chat_sender {
     display: flex;
     justify-content: flex-end;
-    flex-direction: row
+    flex-direction: row;
 }
 
 .chat_sender img,
 .chat_receiver img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
 }
 
 .chat_sender p {
     padding: 10px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     max-width: 60%,
 }
@@ -100,7 +102,7 @@ margin-bottom: 20px;
 .chat_receiver {
     display: flex;
     justify-content: flex-start;
-    flex-direction: row
+    flex-direction: row;
 }
 
 
